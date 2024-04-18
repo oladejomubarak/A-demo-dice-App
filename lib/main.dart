@@ -8,7 +8,7 @@ void main() {
         body: GradientContainer( [
             Color.fromARGB(255, 74, 156, 15),
             Color.fromARGB(255, 100, 56, 176),
-            Color.fromARGB(255, 176, 56, 56),
+            Color.fromARGB(255, 164, 42, 42),
           ],)),
     ),
   );
