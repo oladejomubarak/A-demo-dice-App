@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class QuestionsSummary extends StatelessWidget {
-  QuestionsSummary(this.summaryData, {super.key});
+  const QuestionsSummary(this.summaryData, {super.key});
 
-  List<Map<String, Object>> summaryData;
+  final List<Map<String, Object>> summaryData;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,23 @@ class QuestionsSummary extends StatelessWidget {
           children: summaryData.map((data) {
             return Row(
               children: [
-                Text(((data['question_index'] as int) + 1).toString()),
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                  ),
+                  child: Center(
+                    child: Text(
+                      ((data['question_index'] as int) + 1).toString(),
+                      style: const TextStyle(
+                        color: Colors.white, // Adjust text color as needed
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
                 Expanded(
                   child: Column(
                     children: [
